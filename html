@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi novia?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f2;
+            padding: 50px;
+        }
+        .carta {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        .botones {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #ff4d79;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #no {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="carta">
+        <h2>💌 Hola, preciosa 💌</h2>
+        <p>Desde hace tiempo quiero decirte algo muy especial...</p>
+        <p>¿Quieres ser mi novia? ❤️</p>
+        <div class="botones">
+            <button onclick="aceptar()">Sí 😍</button>
+            <button id="no" onmouseover="moverBoton()">No 😢</button>
+        </div>
+    </div>
+
+    <script>
+        function aceptar() {
+            alert("¡Sabía que dirías que sí! 💖🥰");
+        }
+
+        function moverBoton() {
+            var x = Math.random() * (window.innerWidth - 100);
+            var y = Math.random() * (window.innerHeight - 50);
+            document.getElementById('no').style.left = x + 'px';
+            document.getElementById('no').style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>
